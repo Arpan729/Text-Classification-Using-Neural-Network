@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'percircle.css' %}">
+
+{% block content %}
+
+<h4 class="center-align red lighten-3">Disease Categorization</h4>
+
+<hr>
+
+<div class="row">
+	<div class="col-md-5">
+		<h5>Your Symtoms looks like you are suffering from </h5>
+		<h4>{{ disease }}</h4>
+	</div>
+	<!-- <div class="col-md-5 col-md-offset-2">
+		<h5>Your Symtoms looks like you are suffering from </h5>
+		<form>
+			<div class="form-group">
+				<label for="exampleInputMessege"><h6>Category</h6></label>
+				<textarea type="messege" class="form-control" id="exampleInputMessege" rows="5">{{ messege }}</textarea>
+			</div>
+		</form>
+	</div> -->
+</div>
+<br><br>
+<div id="bluecircle" data-percent="{{ accuracy }}" class="big">
+</div>
+<p>Accuracy</p>
+
+
+{% endblock %}
