@@ -174,10 +174,8 @@ def train(X, y, hidden_neurons=10, alpha=1, epochs=50000, dropout=False, dropout
         
         layer_2_delta = layer_2_error * sigmoid_output_to_derivative(layer_2)
 
-        
         layer_1_error = layer_2_delta.dot(synapse_1.T)
 
-       
         layer_1_delta = layer_1_error * sigmoid_output_to_derivative(layer_1)
         
         synapse_1_weight_update = (layer_1.T.dot(layer_2_delta))
